@@ -1,14 +1,14 @@
 <template>
   <div class="block text-center" style="width: 100%;height: 100%;margin-top: 20px" >
-
-    <el-carousel height="720px" style="width: 100%">
+    主页，到时候放摄像头
+<!--    <el-carousel height="720px" style="width: 100%">
       <el-carousel-item v-for="item in 4" :key="item" >
-        <img class="p1" src="../assets/3.jpg"  v-show="item===2">
-        <img class="p2" src="../assets/2.jpeg"  v-show="item===1">
-        <img class="p3" src="../assets/4.jpg"  v-show="item===3">
-        <img class="p2" src="../assets/2.jpeg"  v-show="item===4">
+        <img class="p1" src="../assets/1.jpg"  v-show="item===2">
+        <img class="p2" src="../assets/2.jpg"  v-show="item===1">
+        <img class="p3" src="../assets/4.png"  v-show="item===3">
+        <img class="p2" src="../assets/2.jpg"  v-show="item===4">
       </el-carousel-item>
-    </el-carousel>
+    </el-carousel>-->
   </div>
 
 </template>
@@ -42,3 +42,5 @@
 
 
 </style>
+<script setup>
+</script>

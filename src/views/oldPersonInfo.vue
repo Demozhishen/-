@@ -170,6 +170,9 @@
         <el-form-item label="身份证号码">
           <el-input v-model="form.idCard"></el-input>
         </el-form-item>
+        <el-form-item label="房间号">
+          <el-input v-model="form.roomNumber"></el-input>
+        </el-form-item>
         <el-form-item label="出生日期">
           <el-date-picker
               v-model="form.birthday"
@@ -244,7 +247,8 @@ export default {
       currentPage:1,
       pageSize:10,
       search:'',
-      tableData:[]
+      tableData:[],
+      systemUser:{},
     }
   },
   created() {
@@ -271,8 +275,11 @@ export default {
     },
     save(){
 
+      this.systemUser=JSON.parse(localStorage.getItem("user"))
+      console.log(this.systemUser)
       if(this.form.id)
       {
+        this.form.updatedBy=this.systemUser.id
         request.put("/older",this.form).then(res=>{
 
           if(res.code==='0')
@@ -294,6 +301,7 @@ export default {
         })
       }else
       {
+        this.form.createdBy=this.systemUser.id
         request.post("/older", this.form).then(res => {
           console.log(res)
           this.$message({

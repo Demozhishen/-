@@ -27,13 +27,13 @@
 
       <el-sub-menu index="1">
         <template #title>
-          <el-icon><user/></el-icon>
-          <span>个人中心</span>
+          <el-icon><Setting /></el-icon>
+          <span>管理中心</span>
         </template>
         <el-menu-item-group >
           <el-menu-item index="/home" >
-            <el-icon><HomeFilled /></el-icon>
-            <span>主页</span>
+            <el-icon><CameraFilled /></el-icon>
+            <span>监控主页</span>
           </el-menu-item>
           <el-menu-item index="/sysUser">
             <el-icon><UserFilled /></el-icon>
@@ -44,20 +44,20 @@
 
       <el-sub-menu index="2">
         <template #title>
-          <el-icon><Bicycle /></el-icon>
+          <el-icon><Document /></el-icon>
           <span>信息管理</span>
         </template>
         <el-menu-item-group >
           <el-menu-item index="/oldPersonInfo" >
-            <el-icon><Place /></el-icon>
+            <el-icon><Notebook /></el-icon>
             <span>老人信息管理</span>
           </el-menu-item>
           <el-menu-item index="/employeeInfo" >
-            <el-icon><Coordinate /></el-icon>
+            <el-icon><ScaleToOriginal /></el-icon>
             <span>员工信息管理</span>
           </el-menu-item>
           <el-menu-item index="/volunteerInfo">
-            <el-icon><Timer /></el-icon>
+            <el-icon><Postcard /></el-icon>
             <span>义工信息管理</span>
           </el-menu-item>
         </el-menu-item-group>
@@ -66,12 +66,12 @@
 
       <el-sub-menu index="3">
         <template #title>
-          <el-icon><location /></el-icon>
+          <el-icon><List /></el-icon>
           <span>事件管理</span>
         </template>
         <el-menu-item-group >
           <el-menu-item index="/eventInfo" >
-            <el-icon><Promotion /></el-icon>
+            <el-icon><Reading /></el-icon>
             <span>事件信息</span>
           </el-menu-item>
 
@@ -89,6 +89,7 @@ import {
   Setting,
   User,
   UserFilled,
+
 } from '@element-plus/icons-vue'
 import {
   AddLocation,
@@ -99,7 +100,13 @@ import {
   Place,
   Promotion,
   SortUp,
-  Timer
+  Timer,
+  CameraFilled,
+  Notebook,
+  ScaleToOriginal,
+  Postcard,
+  List,
+  Reading
 } from "@element-plus/icons";
 
 
@@ -123,6 +130,12 @@ export default {
     AddLocation,
     HomeFilled,
     Promotion,
+    CameraFilled,
+    Notebook,
+    ScaleToOriginal,
+    Postcard,
+    List,
+    Reading
   },
   data(){
     return{

@@ -121,6 +121,11 @@
         <el-form-item label="真实姓名">
           <el-input v-model="form.realName"></el-input>
         </el-form-item>
+        <el-form-item label="性别">
+          <el-radio v-model="form.sex" label="男">男</el-radio>
+          <el-radio v-model="form.sex" label="女">女</el-radio>
+          <el-radio v-model="form.sex" label="未知">未知</el-radio>
+        </el-form-item>
         <el-form-item label="电话号码">
           <el-input v-model="form.phone"></el-input>
         </el-form-item>
@@ -170,7 +175,8 @@ export default {
       currentPage:1,
       pageSize:5,
       search:'',
-      tableData:[]
+      tableData:[],
+      systemUser:{},
     }
     },
   created() {
@@ -201,9 +207,11 @@ export default {
       this.form={}
     },
     save(){
+      this.systemUser=JSON.parse(localStorage.getItem("user"))
       console.log(this.form.id)
       if(this.form.id)
       {
+        this.form.updateBy=this.systemUser.id
         request.put("/sysUser",this.form).then(res=>{
 
           if(res.code==='0')
@@ -225,6 +233,7 @@ export default {
         })
       }else
         {
+          this.form.createBy=this.systemUser.id
           request.post("/sysUser", this.form,{
             params:{
               search:this.search

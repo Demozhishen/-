@@ -28,7 +28,7 @@ export default {
 
   data(){
     return{
-      name:localStorage.getItem("user")?JSON.parse(localStorage.getItem("user")).username:null,
+      name:localStorage.getItem("user")?JSON.parse(localStorage.getItem("user")).userName :null,
 
     }
   },

@@ -2,13 +2,13 @@
   <div class="loginbody">
     <div class="logindata">
       <div class="logintext">
-        <h2>共享单车管理系统</h2>
+        <h2>智慧养老系统</h2>
       </div>
       <div class="formdata">
-        <el-form ref="form" :model="form" :rules="rules1">
+        <el-form ref="form" :model="form" >
           <el-form-item prop="username">
             <el-input
-                v-model="form.username"
+                v-model="form.userName"
                 clearable
                 placeholder="请输入账号"
             ></el-input>
@@ -157,6 +157,7 @@ export default {
                 message:"登录成功"
               })
               localStorage.setItem("user",JSON.stringify(res.data))
+              console.log(res)
               //localStorage.setItem("menu",JSON.stringify(res.data.menu))
               this.$router.push('/')
             }
@@ -222,7 +223,7 @@ export default {
   width: 100%;
   height: 100%;
   min-width: 1000px;
-  background-image: url("../assets/4.jpg");
+  background-image: url("../assets/4.png");
   background-size: 100% 100%;
   background-position: center center;
   overflow: auto;
@@ -265,7 +266,7 @@ export default {
   color: #606266;
 }
 .dialog{
-  background-image: url("../assets/4.jpg");
+  background-image: url("../assets/4.png");
   background-size: 100% 100%;
 }
 

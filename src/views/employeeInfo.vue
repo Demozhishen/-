@@ -204,6 +204,7 @@ export default {
       pageSize:10,
       search:'',
       tableData:[],
+      systemUser:{},
     }
   },
   created() {
@@ -229,9 +230,11 @@ export default {
       this.form={}
     },
     save(){
+      this.systemUser=JSON.parse(localStorage.getItem("user"))
 
       if(this.form.id)
       {
+        this.form.updatedBy=this.systemUser.id
         request.put("/employee",this.form).then(res=>{
 
           if(res.code==='0')
@@ -253,6 +256,7 @@ export default {
         })
       }else
       {
+        this.form.createdBy=this.systemUser.id
         request.post("/employee", this.form).then(res => {
           console.log(res)
           this.$message({
