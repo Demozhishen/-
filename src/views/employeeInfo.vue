@@ -10,8 +10,8 @@
           <el-button class="ml-5" type="primary">搜索</el-button>
         </div>-->
 
-    <div style="margin: 10px">
-      <el-input v-model="search" placeholder="请输入围栏名称" style="width:200px" clearable/>
+    <div style="margin: 10px;text-align: center" class="button-container">
+      <el-input v-model="search" placeholder="请输入工作人员姓名" style="width:200px" clearable/>
       <el-button type="primary" style="margin-left: 5px" @click="load">查询</el-button>
     </div>
 
@@ -19,7 +19,7 @@
     <!--    功能区-->
 
 
-    <div style="margin: 10px">
+    <div style="margin: 10px;text-align: center">
       <el-button type="primary" @click="add">新增</el-button>
 
       <el-button type="primary" @click="exp">导出 <i class="el-icon-top"></i></el-button>
@@ -349,5 +349,6 @@ export default {
   height: 178px;
   text-align: center;
 }
+
 </style>
 

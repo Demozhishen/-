@@ -10,8 +10,8 @@
           <el-button class="ml-5" type="primary">搜索</el-button>
         </div>-->
 
-    <div style="margin: 10px">
-      <el-input v-model="search" placeholder="请输入围栏名称" style="width:200px" clearable/>
+    <div style="margin: 10px; text-align: center">
+      <el-input v-model="search" placeholder="请输入老人信息" style="width:200px" clearable/>
       <el-button type="primary" style="margin-left: 5px" @click="load">查询</el-button>
     </div>
 
@@ -19,10 +19,10 @@
     <!--    功能区-->
 
 
-    <div style="margin: 10px">
+    <div style="margin: 10px; text-align: center">
       <el-button type="primary" @click="add">新增</el-button>
 
-      <el-button type="primary" @click="exp">导出 <i class="el-icon-top"></i></el-button>
+      <el-button type="primary" @click="exp">导出<i class="el-icon-top"></i></el-button>
 
     </div>
 
@@ -117,10 +117,10 @@
       <el-table-column prop="description" label="描述" />
       <el-table-column fixed="right" label="Operations" >
         <template #default="scope">
-          <el-button type="success" @click="handleEdit(scope.row)" round>编辑</el-button>
+          <el-button type="success" size="small" @click="handleEdit(scope.row)" round>编辑</el-button>
           <el-popconfirm title="确认删除？" @confirm="handleDelete(scope.row.id)">
             <template #reference>
-              <el-button type="danger" round>删除 </el-button>
+              <el-button type="danger" size="small" round style="margin-left: 0">删除</el-button>
             </template>
           </el-popconfirm>
         </template>
