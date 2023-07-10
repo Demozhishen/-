@@ -11,7 +11,7 @@
         </div>-->
 
     <div style="margin: 10px">
-      <el-input v-model="search" placeholder="请输入围栏名称" style="width:200px" clearable/>
+      <el-input v-model="search" placeholder="请输入老人信息" style="width:200px" clearable/>
       <el-button type="primary" style="margin-left: 5px" @click="load">查询</el-button>
     </div>
 
