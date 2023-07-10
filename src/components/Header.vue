@@ -1,6 +1,6 @@
 <template>
   <div style="height: 50px;line-height: 50px; border-bottom: 1px solid #ccc; display: flex">
-    <div style="width: 200px; padding-left: 30px;font-weight: bold;color: black;font-size: 27px">智慧养老</div>
+    <div style="width: 400px; padding-left: 20px;font-weight: bold;color: black;font-size: 27px">欢迎来到智慧养老系统</div>
     <div style="flex: 1"></div>
     <div style="width: 100px; ">
       <el-dropdown style="top: 15px">
