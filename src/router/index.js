@@ -39,6 +39,11 @@ const routes = [
         component: ()=>import("@/views/home")
       },
       {
+        path: '/oldPeopleView',
+        name: 'oldPeopleView',
+        component: ()=>import("@/views/oldPeopleView.vue")
+      },
+      {
         path: '/sysUser',
         name: 'sysUser',
         component: ()=>import("@/views/sysUser.vue")

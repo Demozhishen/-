@@ -77,6 +77,20 @@
 
         </el-menu-item-group>
       </el-sub-menu>
+
+      <el-sub-menu index="4">
+        <template #title>
+<!--          <el-icon><List /></el-icon>-->
+          <span>统计信息</span>
+        </template>
+        <el-menu-item-group >
+          <el-menu-item index="/oldPeopleView" style="text-align: center">
+<!--            <el-icon><Reading /></el-icon>-->
+            <span>老人信息统计</span>
+          </el-menu-item>
+
+        </el-menu-item-group>
+      </el-sub-menu>
     </el-menu>
   </div>
 </template>

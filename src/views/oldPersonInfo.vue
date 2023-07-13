@@ -54,6 +54,7 @@
           </el-popover>
         </template>
       </el-table-column>
+      <el-table-column prop="age" label="年龄" width="90px"/>
       <el-table-column prop="checkinDate" label="入养老院日期" />
       <el-table-column prop="checkoutDate" label="离开养老院日期" />
       <el-table-column prop="roomNumber" label="房间号" width="80" />
@@ -157,6 +158,10 @@
 
         <el-form-item label="老人姓名">
           <el-input v-model="form.username"></el-input>
+        </el-form-item>
+
+        <el-form-item label="老人年龄">
+          <el-input v-model="form.age"></el-input>
         </el-form-item>
 
         <el-form-item label="性别">
