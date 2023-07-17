@@ -10,7 +10,7 @@ const routes = [
     path: '/',
     name: 'layout',
     component: Layout,
-    redirect:"/home",
+    redirect:"/cv1",
     children:[
       {
         path: '/eventInfo',
@@ -48,6 +48,40 @@ const routes = [
         name: 'sysUser',
         component: ()=>import("@/views/sysUser.vue")
       },
+      {
+        path: '/cv1',
+        name: 'cv1',
+        component: ()=>import("@/views/cv1.vue")
+      },
+      {
+        path: '/cv2',
+        name: 'cv2',
+        component: ()=>import("@/views/cv2.vue")
+      }, {
+        path: '/cv3',
+        name: 'cv3',
+        component: ()=>import("@/views/cv3.vue")
+      }, {
+        path: '/cv4',
+        name: 'cv4',
+        component: ()=>import("@/views/cv4.vue")
+      }, {
+        path: '/cv5',
+        name: 'cv5',
+        component: ()=>import("@/views/cv5.vue")
+      },{
+        path: '/face',
+        name: 'face',
+        component: ()=>import("@/views/face.vue")
+      },{
+        path: '/check',
+        name: 'check',
+        component: ()=>import("@/views/checkMessage.vue")
+      },
+
+
+
+
 
 
 

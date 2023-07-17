@@ -54,6 +54,8 @@
           </el-popover>
         </template>
       </el-table-column>
+      <el-table-column prop="flag" label="标识" />
+
       <el-table-column prop="hireDate" label="入职日期" />
       <el-table-column prop="resignDate" label="离职日期" />
 
@@ -136,6 +138,9 @@
         </el-form-item>
         <el-form-item label="电话号码">
           <el-input v-model="form.phone"></el-input>
+        </el-form-item>
+        <el-form-item label="标识">
+          <el-input v-model="form.flag"></el-input>
         </el-form-item>
         <el-form-item label="身份证号码">
           <el-input v-model="form.idCard"></el-input>

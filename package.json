@@ -17,6 +17,8 @@
     "echarts": "^4.0.1",
     "element-plus": "^2.3.2",
     "element-ui": "^2.15.13",
+    "v-viewer": "^1.6.4",
+    "viewerjs": "^1.11.3",
     "vue": "^3.2.13",
     "vue-baidu-map": "^0.21.22",
     "vue-router": "^4.0.3",

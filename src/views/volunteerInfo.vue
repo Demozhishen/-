@@ -54,6 +54,8 @@
           </el-popover>
         </template>
       </el-table-column>
+      <el-table-column prop="flag" label="标识" />
+
       <el-table-column prop="checkinDate" label="访问日期" />
       <el-table-column prop="checkoutDate" label="离职日期" />
 
@@ -133,6 +135,9 @@
           <el-radio v-model="form.gender" label="男">男</el-radio>
           <el-radio v-model="form.gender" label="女">女</el-radio>
           <el-radio v-model="form.gender" label="未知">未知</el-radio>
+        </el-form-item>
+        <el-form-item label="标识">
+          <el-input v-model="form.flag"></el-input>
         </el-form-item>
         <el-form-item label="电话号码">
           <el-input v-model="form.phone"></el-input>

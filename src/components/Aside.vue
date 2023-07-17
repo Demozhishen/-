@@ -27,18 +27,37 @@
 
       <el-sub-menu index="1">
         <template #title>
-          <el-icon><Setting /></el-icon>
-          <span>管理中心</span>
+          <el-icon><VideoCamera /></el-icon>
+          <span>监控中心</span>
         </template>
         <el-menu-item-group >
-          <el-menu-item index="/home" >
+          <el-menu-item index="/cv1" >
             <el-icon><CameraFilled /></el-icon>
-            <span>监控主页</span>
+            <span>摄像头</span>
           </el-menu-item>
-          <el-menu-item index="/sysUser">
-            <el-icon><UserFilled /></el-icon>
-            <span>管理员信息</span>
+
+          <el-menu-item index="/cv2" >
+            <el-icon><CameraFilled /></el-icon>
+            <span>禁区闯入检测</span>
           </el-menu-item>
+          <el-menu-item index="/cv3" >
+            <el-icon><CameraFilled /></el-icon>
+            <span>老人房间检测</span>
+          </el-menu-item>
+          <el-menu-item index="/cv4" >
+          <el-icon><CameraFilled /></el-icon>
+          <span>交互检测</span>
+        </el-menu-item>
+          <el-menu-item index="/cv5" >
+          <el-icon><CameraFilled /></el-icon>
+          <span>摔倒检测</span>
+        </el-menu-item>
+          <el-menu-item index="/face" >
+            <el-icon><CameraFilled /></el-icon>
+            <span>人脸采集</span>
+          </el-menu-item>
+
+          \
         </el-menu-item-group>
       </el-sub-menu>
 
@@ -48,6 +67,10 @@
           <span>信息管理</span>
         </template>
         <el-menu-item-group >
+          <el-menu-item index="/sysUser">
+            <el-icon><UserFilled /></el-icon>
+            <span>管理员信息</span>
+          </el-menu-item>
           <el-menu-item index="/oldPersonInfo" >
             <el-icon><Notebook /></el-icon>
             <span>老人信息管理</span>
@@ -80,13 +103,17 @@
 
       <el-sub-menu index="4">
         <template #title>
-<!--          <el-icon><List /></el-icon>-->
+          <el-icon><TrendCharts /></el-icon>
           <span>统计信息</span>
         </template>
         <el-menu-item-group >
           <el-menu-item index="/oldPeopleView" style="text-align: center">
-<!--            <el-icon><Reading /></el-icon>-->
+            <el-icon><CircleCheck /></el-icon>
             <span>老人信息统计</span>
+          </el-menu-item>
+          <el-menu-item index="/check" style="text-align: center">
+            <el-icon><Check /></el-icon>
+            <span>信息监测</span>
           </el-menu-item>
 
         </el-menu-item-group>
@@ -103,6 +130,9 @@ import {
   Setting,
   User,
   UserFilled,
+  VideoCamera,
+  TrendCharts,
+  Check
 
 } from '@element-plus/icons-vue'
 import {
@@ -120,7 +150,8 @@ import {
   ScaleToOriginal,
   Postcard,
   List,
-  Reading
+  Reading,
+  CircleCheck
 } from "@element-plus/icons";
 
 
@@ -149,7 +180,11 @@ export default {
     ScaleToOriginal,
     Postcard,
     List,
-    Reading
+    Reading,
+    VideoCamera,
+    TrendCharts,
+    Check,
+    CircleCheck
   },
   data(){
     return{
